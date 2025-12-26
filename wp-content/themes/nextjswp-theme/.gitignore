@@ -1,0 +1,32 @@
+# WordPress
+.DS_Store
+*.log
+.htaccess
+
+# Backup files
+*.backup
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node modules (if any)
+node_modules/
+package-lock.json
+
+# Build files
+*.map
+
+# Environment files
+.env
+.env.local

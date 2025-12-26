@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../../../../../Users/chetandhargalkar/Desktop/github/nextjs-wordpress-headless"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "nextjs-wordpress-headless"
+  }
+}

@@ -1,0 +1,9 @@
+dist/
+.vite/
+node_modules/
+vendor/
+*.min.js
+*.min.css
+*.map
+.DS_Store
+

@@ -1,0 +1,67 @@
+{
+    "key": "group_68e4efc528d1e",
+    "title": "News Listing Content",
+    "fields": [
+        {
+            "key": "field_68e4efc5e4829",
+            "label": "News Listing Title",
+            "name": "news_listing_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the main heading for the news listing page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Driving what's next",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68e4efd4e482a",
+            "label": "News Listing Description",
+            "name": "news_listing_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Enter the description text below the main heading",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "A look at our innovations, research milestones, and events that keep us ahead in a changing world.",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-news-listing.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "display_title": ""
+}
