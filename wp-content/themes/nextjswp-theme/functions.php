@@ -64,6 +64,9 @@ require_once get_template_directory() . '/inc/admin-customizations.php';
 // Product filtering AJAX
 require_once get_template_directory() . '/inc/ajax/product-filter.php';
 
+// Case Studies Custom Post Type
+require_once get_template_directory() . '/inc/post-types/case-studies.php';
+
 // ============================================================================
 // ACF CONFIGURATION
 // ============================================================================
@@ -328,7 +331,8 @@ add_action('init', function () {
         'news' => ['singular' => 'News', 'plural' => 'News'],
         'team_member' => ['singular' => 'TeamMember', 'plural' => 'TeamMembers'],
         'product' => ['singular' => 'Product', 'plural' => 'Products'],
-        'reports' => ['singular' => 'Report', 'plural' => 'Reports']
+        'reports' => ['singular' => 'Report', 'plural' => 'Reports'],
+        'case-studies' => ['singular' => 'CaseStudy', 'plural' => 'CaseStudies']
     ];
     foreach ($cpts as $post_type => $names) {
         $obj = get_post_type_object($post_type);

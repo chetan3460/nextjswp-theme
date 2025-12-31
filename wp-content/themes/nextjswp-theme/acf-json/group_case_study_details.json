@@ -1,0 +1,162 @@
+[
+  {
+    "key": "group_create_case_study_details",
+    "title": "Case Study Details",
+    "fields": [
+      {
+        "key": "field_cs_subtitle",
+        "label": "Subtitle",
+        "name": "subtitle",
+        "type": "text",
+        "instructions": "Small green badge text above title",
+        "required": 0,
+        "show_in_rest": 1,
+        "show_in_graphql": 1
+      },
+      {
+        "key": "field_cs_blocks",
+        "label": "Detail Blocks",
+        "name": "detail_blocks",
+        "type": "flexible_content",
+        "instructions": "Add dynamic content blocks for the detail page",
+        "required": 0,
+        "show_in_rest": 1,
+        "show_in_graphql": 1,
+        "layouts": {
+          "layout_rich_text": {
+            "key": "layout_rich_text",
+            "name": "rich_text",
+            "label": "Rich Text",
+            "display": "block",
+            "sub_fields": [
+              {
+                "key": "field_rt_anchor",
+                "label": "Anchor ID",
+                "name": "anchor_id",
+                "type": "text"
+              },
+              {
+                "key": "field_rt_title",
+                "label": "Title",
+                "name": "title",
+                "type": "text"
+              },
+              {
+                "key": "field_rt_content",
+                "label": "Content",
+                "name": "content",
+                "type": "wysiwyg"
+              }
+            ]
+          },
+          "layout_image_block": {
+            "key": "layout_image_block",
+            "name": "image_block",
+            "label": "Image Block",
+            "display": "block",
+            "sub_fields": [
+              {
+                "key": "field_ib_anchor",
+                "label": "Anchor ID",
+                "name": "anchor_id",
+                "type": "text"
+              },
+              {
+                "key": "field_ib_image",
+                "label": "Image",
+                "name": "image",
+                "type": "image",
+                "return_format": "array"
+              }
+            ]
+          },
+          "layout_checklist": {
+            "key": "layout_checklist",
+            "name": "checklist_section",
+            "label": "Checklist Section",
+            "display": "block",
+            "sub_fields": [
+              {
+                "key": "field_cl_anchor",
+                "label": "Anchor ID",
+                "name": "anchor_id",
+                "type": "text"
+              },
+              {
+                "key": "field_cl_title",
+                "label": "Title",
+                "name": "title",
+                "type": "text"
+              },
+              {
+                "key": "field_cl_desc",
+                "label": "Description",
+                "name": "description",
+                "type": "textarea"
+              },
+              {
+                "key": "field_cl_items",
+                "label": "List Items",
+                "name": "list_items",
+                "type": "repeater",
+                "sub_fields": [
+                  {
+                    "key": "field_cl_item_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          "layout_testimonial": {
+            "key": "layout_testimonial",
+            "name": "testimonial",
+            "label": "Testimonial",
+            "display": "block",
+            "sub_fields": [
+              {
+                "key": "field_tm_quote",
+                "label": "Quote",
+                "name": "quote",
+                "type": "textarea"
+              },
+              {
+                "key": "field_tm_name",
+                "label": "Name",
+                "name": "name",
+                "type": "text"
+              },
+              {
+                "key": "field_tm_role",
+                "label": "Role/Company",
+                "name": "role",
+                "type": "text"
+              },
+              {
+                "key": "field_tm_avatar",
+                "label": "Avatar",
+                "name": "avatar",
+                "type": "image",
+                "return_format": "array"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "case-studies"
+        }
+      ]
+    ],
+    "show_in_rest": 1,
+    "show_in_graphql": 1,
+    "graphql_field_name": "caseStudyDetails"
+  }
+]

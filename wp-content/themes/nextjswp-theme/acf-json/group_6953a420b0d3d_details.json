@@ -1,0 +1,206 @@
+{
+    "key": "group_6953a420b0d3d_details",
+    "title": "Case Study Details",
+    "fields": [
+        {
+            "key": "field_6953a429b0d3f_subtitle",
+            "label": "Subtitle",
+            "name": "subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Small green badge text above title",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6953a43bb0d40_blocks",
+            "label": "Detail Blocks",
+            "name": "detail_blocks",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "Add dynamic content blocks for the detail page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_6953a441b0d41_rich_text": {
+                    "key": "layout_6953a441b0d41_rich_text",
+                    "name": "rich_text",
+                    "label": "Rich Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6953a44cb0d42_anchor",
+                            "label": "Anchor ID",
+                            "name": "anchor_id",
+                            "type": "text",
+                            "instructions": "Used for Table of Contents links"
+                        },
+                        {
+                            "key": "field_6953a44cb0d42_title",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_6953a44cb0d42_content",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6953a44cb0d42_image": {
+                    "key": "layout_6953a44cb0d42_image",
+                    "name": "image_block",
+                    "label": "Image Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6953a44cb0d42_img_anchor",
+                            "label": "Anchor ID",
+                            "name": "anchor_id",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_6953a44cb0d42_img_file",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6953a44cb0d42_checklist": {
+                    "key": "layout_6953a44cb0d42_checklist",
+                    "name": "checklist_section",
+                    "label": "Checklist Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6953a44cb0d42_cl_anchor",
+                            "label": "Anchor ID",
+                            "name": "anchor_id",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_6953a44cb0d42_cl_title",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_6953a44cb0d42_cl_desc",
+                            "label": "Description",
+                            "name": "description",
+                            "type": "textarea"
+                        },
+                        {
+                            "key": "field_6953a44cb0d42_cl_items",
+                            "label": "List Items",
+                            "name": "list_items",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6953a44cb0d42_cl_item_text",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "type": "text"
+                                }
+                            ],
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Row"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6953a44cb0d42_testimonial": {
+                    "key": "layout_6953a44cb0d42_testimonial",
+                    "name": "testimonial",
+                    "label": "Testimonial",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6953a44cb0d42_tm_quote",
+                            "label": "Quote",
+                            "name": "quote",
+                            "type": "textarea"
+                        },
+                        {
+                            "key": "field_6953a44cb0d42_tm_name",
+                            "label": "Name",
+                            "name": "name",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_6953a44cb0d42_tm_role",
+                            "label": "Role/Company",
+                            "name": "role",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_6953a44cb0d42_tm_avatar",
+                            "label": "Avatar",
+                            "name": "avatar",
+                            "type": "image",
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Block",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "case-studies"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "show_in_graphql": 1,
+    "graphql_field_name": "caseStudyDetails",
+    "display_title": "",
+    "modified": 1735571241
+}
