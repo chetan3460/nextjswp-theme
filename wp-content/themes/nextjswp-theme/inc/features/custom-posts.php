@@ -225,49 +225,40 @@ function create_custom_posts()
     ]
   );
 
-  // Product Application Taxonomy
-  $application_labels = [
-    'name' => _x('Applications', 'product application'),
-    'singular_name' => _x('Application', 'product application'),
-    'search_items' => __('Search Applications'),
-    'all_items' => __('All Applications'),
-    'parent_item' => __('Parent Application'),
-    'parent_item_colon' => __('Parent Application:'),
-    'edit_item' => __('Edit Application'),
-    'update_item' => __('Update Application'),
-    'add_new_item' => __('Add New Application'),
-    'new_item_name' => __('New Application Name'),
-    'menu_name' => __('Applications'),
-  ];
-
-  register_taxonomy(
-    'product_application',
-    ['product'],
-    [
-      'hierarchical' => false,
-      'labels' => $application_labels,
-      'show_ui' => true,
-      'show_admin_column' => true,
-      'show_in_menu' => true,
-      'show_tagcloud' => true,
-      'show_in_quick_edit' => true,
-      'meta_box_cb' => 'post_categories_meta_box',
-      'query_var' => true,
-      'show_in_rest' => true,
-      'rewrite' => ['slug' => 'application'],
-      'capabilities' => [
-        'manage_terms' => 'manage_product_terms',
-        'edit_terms' => 'manage_product_terms',
-        'delete_terms' => 'manage_product_terms',
-        'assign_terms' => 'edit_posts',
-      ],
-    ]
-  );
+  // CPT Testimonials
+  register_post_type('testimonial', [
+    'labels' => [
+      'name' => __('Testimonials'),
+      'singular_name' => __('Testimonial'),
+      'menu_name' => __('Testimonials'),
+      'add_new' => __('Add New'),
+      'add_new_item' => __('Add New Testimonial'),
+      'edit_item' => __('Edit Testimonial'),
+      'new_item' => __('New Testimonial'),
+      'view_item' => __('View Testimonial'),
+      'search_items' => __('Search Testimonials'),
+      'not_found' => __('No testimonials found'),
+      'not_found_in_trash' => __('No testimonials found in trash'),
+    ],
+    'public' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'has_archive' => false,
+    'show_in_rest' => true,
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'menu_position' => 26,
+    'menu_icon' => 'dashicons-format-quote',
+    'supports' => ['title', 'editor', 'thumbnail'],
+    'show_in_graphql' => true,
+    'graphql_single_name' => 'testimonial',
+    'graphql_plural_name' => 'testimonials',
+  ]);
 }
 
 // Ensure ACF fields are always visible in REST API for custom post types
 add_action('rest_api_init', function () {
-  $types = ['team_member', 'news', 'product'];
+  $types = ['team_member', 'news', 'product', 'testimonial', 'reports'];
   foreach ($types as $type) {
     register_rest_field($type, 'acf', [
       'get_callback' => function ($post_arr) {

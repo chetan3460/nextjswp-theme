@@ -67,6 +67,9 @@ require_once get_template_directory() . '/inc/ajax/product-filter.php';
 // Case Studies Custom Post Type
 require_once get_template_directory() . '/inc/post-types/case-studies.php';
 
+// Homepage ACF Fields
+require_once get_template_directory() . '/inc/features/homepage-acf.php';
+
 // ============================================================================
 // ACF CONFIGURATION
 // ============================================================================
@@ -661,13 +664,16 @@ function get_footer_data()
     }
 
     $footer_data = [
-        'footer_logo' => $footer_logo,
-        'contact_title' => get_field('contact_title', 'option'),
-        'phone_no' => get_field('phone_no', 'option'),
-        'email' => get_field('email', 'option'),
-        'page_links' => get_field('page_links', 'option'),
-        'follow_us' => get_field('follow_us', 'option'),
-        'policy' => get_field('policy', 'option'),
+        'footer_logo'    => $footer_logo,
+        'contact_title'  => get_field('contact_title', 'option'),
+        'phone_no'       => get_field('phone_no', 'option'),
+        'email'          => get_field('email', 'option'),
+        'address'        => get_field('address', 'option'),
+        'page_links'     => get_field('page_links', 'option'),
+        'footer_columns' => get_field('footer_columns', 'option') ?: [],
+        'follow_us'      => get_field('follow_us', 'option'),
+        'policy'         => get_field('policy', 'option'),
+        'copyright_text' => get_field('copyright_text', 'option'),
     ];
 
     return new WP_REST_Response($footer_data, 200);
